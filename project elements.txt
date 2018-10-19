@@ -1,0 +1,37 @@
+*** structure elements (Semantic elements) *** 
+required 5 or more 
+1- header 
+2- nav 
+3- main
+4- article 
+5- section 
+6- footer 
+7- address 
+8- aside 
+*** content elements *** 
+required 10 or more 
+1- h1 
+2- h2 
+3- h3 
+4- ul 
+5- li 
+6- p 
+7- a 
+8- img 
+9- table 
+10- tr 
+11- th 
+12- td 
+13- i 
+14- hr
+15- b 
+16- code
+17- br 
+  
+ *** id attributes ***
+ 1- used to style logo and current page nav link 
+
+ *** CSS3 grid *** 
+ the whole page is a grid with 3 rows (header, main, footer)
+ header, main, footer are nested grids inside the page gird 
+ each grid represents a row in the main grid 
