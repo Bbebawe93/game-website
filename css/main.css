@@ -1,20 +1,13 @@
+/* Global styles 
+-----------------*/
+
 body {
     margin: 0;
     padding: 0;
 }
 
-.left-col img {
-    display: block;
-    width: 60%;
-    margin: 0 auto;
-    align-content: center;
-}
-
-.right-col img {
-    display: inline-block;
-    width: 25%;
-    margin: 0 auto;
-    padding: 30px;
+header, footer {
+    background-color: #2e4056;
 }
 
 .login-reg-btn {
@@ -33,37 +26,6 @@ body {
 
 .login-reg-btn:hover {
     opacity: .5;
-}
-
-/* Ranking table styles 
------------------------*/
-
-#ranking-table {
-    width: 90%;
-    margin: 0 auto;
-    border-collapse: collapse;
-    border: 2px solid #2e4056;
-}
-
-#ranking-table, #ranking-table th, #ranking-table td {
-    border: 2px solid #2e4056;
-}
-
-#ranking-table th {
-    height: 50px;
-    background-color: rosybrown;
-}
-
-#ranking-table td {
-    height: 30px;
-}
-
-#ranking-table tr:nth-child(odd) {
-    background-color: aquamarine;
-}
-
-#ranking-table tr:nth-child(even) {
-    background-color: tomato;
 }
 
 /* grid layout styles 
@@ -115,8 +77,26 @@ body {
     grid-row: 2;
 }
 
-header, footer {
-    background-color: #2e4056;
+.left-col img {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    align-content: center;
+}
+
+.right-col img {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 32.5%;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.right-col img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
 /* logo styles 
@@ -186,7 +166,6 @@ nav ul a#current {
 
 .main-heading, .secondary-heading, .third-heading {
     background-color: #2e4056;
-    /* color: springgreen; */
     color: rgba(0, 255, 128, 0.76);
     font-family: 'Finger Paint', cursive;
     padding: 5px;
@@ -201,6 +180,7 @@ nav ul a#current {
 
 footer {
     color: aliceblue;
+    margin-top: 50px;
 }
 
 .footer-heading {
@@ -208,12 +188,102 @@ footer {
 }
 
 .copyright {
+    position: relative;
+    bottom: 10px;
     text-align: right;
 }
 
 table {
     border: 1px solid red;
     text-align: center;
+}
+
+/* Ranking table styles 
+-----------------------*/
+
+#ranking-table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 2px solid #2e4056;
+}
+
+/* #ranking-table, #ranking-table th, #ranking-table td {
+    border: 2px solid #2e4056;
+} */
+
+#ranking-table th {
+    height: 50px;
+    background-color: rosybrown;
+}
+
+#ranking-table td {
+    height: 30px;
+}
+
+#ranking-table tr:nth-child(odd) {
+    background-color: aquamarine;
+}
+
+#ranking-table tr:nth-child(even) {
+    background-color: tomato;
+}
+
+/* registration form styles 
+---------------------------*/
+
+#registration-form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+legend {
+    margin-bottom: 20px;
+}
+
+input {
+    display: block;
+    width: 70%;
+    height: 25px;
+    margin-left: 15%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+label {
+    margin-left: 5px;
+}
+
+form span {
+    color: red;
+    margin-left: 10px;
+}
+
+#register-button {
+    display: block;
+    width: 70%;
+    margin: 10px auto;
+    background-color: #66ccff;
+    padding: 10px;
+}
+
+#clear-button {
+    background-color: #b3b3b3;
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+/* Login form styles 
+--------------------*/
+
+#login-button {
+    display: block;
+    width: 70%;
+    margin: 10px auto;
+    background-color: #80ff00;
+    padding: 10px;
 }
 
 /* media queries

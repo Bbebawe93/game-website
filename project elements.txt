@@ -1,6 +1,6 @@
 *** structure elements (Semantic elements) *** 
 required 5 or more 
-1- header 
+1- header  
 2- nav 
 3- main
 4- article 
@@ -8,11 +8,10 @@ required 5 or more
 6- footer 
 7- address 
 8- aside 
+9- h1, h2, h3,
+
 *** content elements *** 
 required 10 or more 
-1- h1 
-2- h2 
-3- h3 
 4- ul 
 5- li 
 6- p 

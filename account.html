@@ -1,13 +1,13 @@
 <!doctype html>
-<!-- Begin html5 document, document language is set to english -->
+<!-- Begin html5 document -->
 <html lang="en-GB">
-    <!-- Begin head element, contains metadata and external resources -->
+    <!-- Begin head element -->
 
     <head>
         <meta charset="utf-8">
         <title>Play Online | Home Page</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
+        <meta name="description" content="Register for a new account or Login in to your current account">
         <meta name="author" content="Beshoy Bebawe">
         <!-- Font Awesome icons cdn -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
@@ -19,20 +19,20 @@
         <!-- Html5 shim for legacy browsers support, hosted by google -->
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+        <![endif]-->
     </head>
     <!-- End head element -->
-    <!-- Begin document body, contains page visible content -->
+    <!-- Begin document body -->
 
     <body class="grid">
-        <!-- Begin document header, contains logo and navigation menu -->
+        <!-- Begin document header -->
         <header role="banner">
             <div class="header-grid">
                 <!-- Begin navigation menu -->
-                <span id="logo" class="col col-3">
+                <span id="logo">
                     <a href="index.html">PLAY-online</a>
                 </span>
-                <nav role="navigation" class="col col-6">
+                <nav role="navigation">
                     <ul>
                         <li><a href="index.html"><i class="fas fa-home"></i> home</a></li>
                         <li><a href="game.html"><i class="fas fa-gamepad"></i> game</a></li>
@@ -48,9 +48,23 @@
         <main role="main" class="main-grid">
             <!-- Begin main grid right column -->
             <div class="right-col">
-                <article>
+                <article role="article">
                     <h1 class="main-heading">Register for a new Account</h1>
-                    <form>Registration form</form>
+                    <form id="registration-form" class="" action="" method="POST">
+                        <fieldset>
+                            <legend>Fill up the below registration form to sign up for a new account</legend>
+                            <label for="full-name">Full Name:</label><span id="full-name-error"> error </span>
+                            <input type="text" name="full-name" id="full-name">
+                            <label for="username">Username:</label><span id="username-error"></span>
+                            <input type="text" name="username" id="username">
+                            <label for="email">Email: </label><span id="email-error"></span>
+                            <input type="email" name="email" id="email">
+                            <label for="password">Password</label><span id="password-error"></span>
+                            <input type="password" name="password" id="password">
+                            <button type="submit" id="register-button">Register</button>
+                            <button type="reset" id="clear-button">Clear</button>
+                        </fieldset>
+                    </form>
                 </article>
             </div>
             <!-- End main grid right column -->
@@ -58,13 +72,23 @@
             <div class="left-col">
                 <section>
                     <h2 class="secondary-heading">Login to your Account</h2>
-                    <form>Login Form</form>
+                    <form id="login-form">
+                        <fieldset>
+                            <legend>Login below using username and password</legend>
+                            <label for="username">Username: </label><span id="username-error"></span>
+                            <input type="text" name="username" id="username">
+                            <label for="password">Password</label><span id="password-error"></span>
+                            <input type="password" name="password" id="password">
+                            <button type="submit" id="login-button">Login</button>
+                            <button type="reset" id="clear-button">Clear</button>
+                        </fieldset>
+                    </form>
                 </section>
             </div>
             <!-- End main grid left column -->
         </main>
         <!-- End document main -->
-        <!-- Begin document footer, contains contact and copyright info -->
+        <!-- Begin document footer -->
         <footer role="contentinfo">
             <div class="footer-grid">
                 <div class="footer-info">
@@ -74,7 +98,7 @@
                         <p><i class="fas fa-phone-square"></i> Phone: 0201 234 5678</p>
                     </address>
                 </div>
-                <div class="copyright"><i>&copy; Copyright 2018 - All rights reserved</i></div>
+                <div class="copyright"><small>&copy; Copyright 2018 - All rights reserved</small></div>
             </div>
         </footer>
         <!-- End document footer -->
