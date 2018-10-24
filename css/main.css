@@ -103,11 +103,10 @@ header, footer {
 ---------------*/
 
 #logo {
-    font-family: 'Finger Paint', cursive;
-    font-size: 32px;
-    display: inline-block;
-    margin-top: 25px;
-}
+    width: 230px;
+    height: 80px; 
+  }
+  
 
 #logo:hover {
     opacity: .5;
@@ -193,13 +192,17 @@ footer {
     text-align: right;
 }
 
-table {
-    border: 1px solid red;
-    text-align: center;
+address a {
+    color: aliceblue;
+    text-decoration-line: none;
 }
 
 /* Ranking table styles 
 -----------------------*/
+table {
+    border: 1px solid red;
+    text-align: center;
+}
 
 #ranking-table {
     width: 90%;
@@ -267,7 +270,7 @@ form span {
     padding: 10px;
 }
 
-#clear-button {
+.clear-button {
     background-color: #b3b3b3;
     display: block;
     width: 70%;

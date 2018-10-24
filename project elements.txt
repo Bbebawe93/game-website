@@ -8,9 +8,10 @@ required 5 or more
 6- footer 
 7- address 
 8- aside 
-9- h1, h2, h3,
 
 *** content elements *** 
+9- h1, h2, h3,
+
 required 10 or more 
 4- ul 
 5- li 
@@ -21,11 +22,8 @@ required 10 or more
 10- tr 
 11- th 
 12- td 
-13- i 
 14- hr
-15- b 
-16- code
-17- br 
+
   
  *** id attributes ***
  1- used to style logo and current page nav link 
