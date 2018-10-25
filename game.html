@@ -25,6 +25,8 @@
     <!-- Begin document body -->
 
     <body class="grid">
+        <!-- begin wrapper, wraps header and main, keeps footer and the bottom -->
+    <div class="wrapper">
         <!-- Begin document header -->
         <header role="banner">
             <div class="header-grid">
@@ -50,7 +52,7 @@
             <div class="right-col">
                 <section>
                     <h1 class="main-heading">Start Playing</h1>
-                    <canvas id="canvas" width="900" height="600" style="border:1px solid blue">Your browser does not
+                    <canvas id="canvas">Your browser does not
                         support html5 canvas</canvas>
                 </section>
             </div>
@@ -66,45 +68,12 @@
                         <br>
                     </p>
                 </section>
-                <section>
-                    <h3 class="third-heading">Rankings</h3>
-                    <table id="ranking-table">
-                        <tr>
-                            <th>Ranking</th>
-                            <th>Player Name</th>
-                            <th>Score</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Beshoy bebawe</td>
-                            <td>9</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Beshoy</td>
-                            <td>9</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Beshoy</td>
-                            <td>9</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Beshoy</td>
-                            <td>9</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Beshoy</td>
-                            <td>9</td>
-                        </tr>
-                    </table>
-                </section>
             </div>
             <!-- End main grid left column -->
         </main>
         <!-- End document main -->
+    </div>
+    <!-- end wrapper (header and main) -->
         <!-- Begin document footer -->
         <footer role="contentinfo">
             <div class="footer-grid">
