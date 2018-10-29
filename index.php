@@ -1,53 +1,16 @@
-<!doctype html>
-<!-- Begin html5 document -->
-<html lang="en-GB">
-    <!-- Begin head element -->
+<?php
+// include common.php to use common function in the page
+include "php-include/head.php";
 
-    <head>
-        <meta charset="utf-8">
-        <title>Play Online | Home Page</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="Beshoy Bebawe">
-        <!-- Font Awesome icons cdn -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-            crossorigin="anonymous">
-        <!-- Google fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Finger+Paint" rel="stylesheet">
-        <!-- CSS external stylesheet -->
-        <link rel="stylesheet" href="css/main.css">
-        <!-- Html5 shim for legacy browsers support, hosted by google -->
-        <!--[if lt IE 9]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-    </head>
-    <!-- End head element -->
-    <!-- Begin document body -->
+// call output_head() function to output document head
+output_head("Home", "page description");
 
-    <body class="grid">
-        <!-- begin wrapper, wraps header and main, keeps footer and the bottom -->
-        <div class="wrapper">
-            <!-- Begin document header -->
-            <header role="banner">
-                <div class="header-grid">
-                    <!-- Begin navigation menu -->
-                    <span>
-                        <a href="index.html"><img src="img/logo.jpg" alt="" id="logo"></a>
-                    </span>
-                    <nav role="navigation">
-                        <ul>
-                            <li><a href="index.html" id="current"><i class="fas fa-home"></i> home</a></li>
-                            <li><a href="game.html"><i class="fas fa-gamepad"></i> game</a></li>
-                            <li><a href="rankings.html"><i class="fas fa-trophy"></i> rankings</a></li>
-                            <li><a href="account.html"><i class="fas fa-user"></i> account</a></li>
-                        </ul>
-                    </nav>
-                    <!-- End navigation menu -->
-                </div>
-            </header>
-            <!-- End document header -->
-            <!-- Begin document main -->
-            <main role="main" class="main-grid">
+include "php-include/header.php";
+
+output_header("Home");
+?>
+ <!-- Begin document main -->
+ <main role="main" class="main-grid">
                 <!-- Begin main grid right column -->
                 <div class="right-col">
                     <article role="article">
@@ -137,7 +100,7 @@
                         <p>Login to your account to start playing. or register for a new account if you do not have an
                             account
                             yet.</p>
-                        <a href="account.html" class="login-reg-btn"><strong>Login/Register</strong></a>
+                        <a href="account.php" class="login-reg-btn"><strong>Login/Register</strong></a>
                     </section>
                 </div>
                 <!-- End main grid left column -->
@@ -145,22 +108,7 @@
             <!-- End document main -->
         </div>
         <!-- end wrapper (header and main) -->
-        <!-- Begin document footer -->
-        <footer role="contentinfo">
-            <div class="footer-grid">
-                <div class="footer-info">
-                    <h2 class="footer-heading">Get in Touch</h2>
-                    <address>
-                        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:bb537@live.mdx.ac.uk">bb537@live.mdx.ac.uk</a></p>
-                        <p><i class="fas fa-phone-square"></i> Phone: 0201 234 5678</p>
-                    </address>
-                </div>
-                <div class="copyright"><small>&copy; Copyright 2018 - All rights reserved</small></div>
-            </div>
-        </footer>
-        <!-- End document footer -->
-    </body>
-    <!-- End document body -->
-
-</html>
-<!-- End html5 document -->
+<?php
+include "php-include/footer.php";
+output_footer();
+?>
