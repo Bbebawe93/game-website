@@ -14,23 +14,22 @@ header, footer {
     background-color: #2e4056;
 }
 
-.login-reg-btn {
-    background-color: #4CAF50;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
+/* Images styles */
+
+.left-col img {
     display: block;
-    width: 80%;
-    height: 40px;
+    width: 60%;
     margin: 0 auto;
-    text-align: center;
-    padding-top: 20px;
-    border-radius: 25px;
-    text-decoration-line: none;
+    align-content: center;
 }
 
-.login-reg-btn:hover {
-    opacity: .5;
+.right-col img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.right-col img:hover, .side-img img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
 .side-img {
@@ -45,6 +44,15 @@ header, footer {
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
+}
+.img-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+}
+
+.img-row img {
+    max-width: 200px;
 }
 
 /* grid layout styles 
@@ -94,23 +102,6 @@ header, footer {
 
 .copyright {
     grid-row: 2;
-}
-
-.left-col img {
-    display: block;
-    width: 60%;
-    margin: 0 auto;
-    align-content: center;
-}
-
-.right-col img {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-
-}
-
-.right-col img:hover, .side-img img:hover {
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
 /* logo styles 
@@ -246,7 +237,7 @@ table {
     background-color: powderblue;
 }
 
-/* registration form styles 
+/* Registration and Login form styles 
 ---------------------------*/
 
 #registration-form {
@@ -315,8 +306,24 @@ form .icon {
     font-weight: bold;
 }
 
-/* Login form styles 
---------------------*/
+.login-reg-btn {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    width: 80%;
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 25px;
+    text-decoration-line: none;
+}
+
+.login-reg-btn:hover {
+    opacity: .5;
+}
 
 #login-button {
     border: none;
@@ -339,11 +346,6 @@ form .icon {
     border: 1px solid #2e4056;
 }
 
-.img-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 20px;
-}
 
 /* media queries
 ----------------*/
@@ -354,4 +356,3 @@ form .icon {
     }
 }
 
-@media(max-width: 890px) {}
