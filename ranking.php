@@ -52,23 +52,18 @@ output_header("Ranking");
                         </table>
                         <br>
                         <h2 class="secondary-heading">Improve your Ranking</h2>
-                        <p>Extended kindness trifling remember he confined outlived if. Assistance sentiments yet
-                            unpleasing
-                            say. Open they an busy they my such high. An active dinner wishes at unable hardly no
-                            talked
-                            on.
-                            Immediate him her resolving his favorites. Wished denote abroad at branch at.</p>
-                        
+                        <p>Extended kindness trifling remember he confined outlived if. Assistance     sentiments yet unpleasing say. Open they an busy they my such high. An      active dinner wishes at unable hardly no talked on.Immediate him her        resolving his favorites. Wished denote abroad at branch at.</p>
+
                     </article>
                 </div>
                 <!-- End main grid right column -->
                 <!-- Begin main grid left column -->
                 <aside>
-                    <div class="left-col side-img">
-                        <img src="img/demo.jpg" alt="" title="">
-                        <img src="img/demo.jpg" alt="" title="">
-                        <img src="img/demo.jpg" alt="" title="">
-                    </div>
+                    <<div class="left-col ">
+                    <img src="img/Placeholder.png" alt="" title="" class="side-img">
+                    <img src="img/Placeholder.png" alt="" title="" class="side-img">
+                    <img src="img/Placeholder.png" alt="" title="" class="side-img">
+                </div>
                 </aside>
                 <!-- End main grid left column -->
             </main>
@@ -76,7 +71,7 @@ output_header("Ranking");
         </div>
         <!-- end wrapper (header and main) -->
 <?php
-// include footer.php to call footer function 
+// include footer.php to call footer function
 include "php-include/footer.php";
 
 // call output_footer function to output document footer

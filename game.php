@@ -19,6 +19,11 @@ output_header("Game");
                     <h1 class="main-heading">Start Playing</h1>
                     <canvas id="canvas">Your browser does not
                         support html5 canvas</canvas>
+                        <form id="game-command">
+                        <label for="command">Game Command</label>
+                        <input type="text" name="command" id="command">
+                        <button type="submit">Run</button>
+                        </form>
                 </section>
             </div>
             <!-- End main grid right column -->
@@ -27,10 +32,10 @@ output_header("Game");
                 <section>
                     <h2 class="secondary-heading">Game Commands</h2>
                     <p>game commands
-                        <br>
-                        <br>
-                        <br>
-                        <br>
+                        <br>game command
+                        <br>game command
+                        <br>game command
+                        <br>game command
                     </p>
                 </section>
             </div>

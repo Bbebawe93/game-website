@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- Begin html5 document -->
-<html lang="en-GB">
+<html lang="en">
     <!-- Begin head element -->
 
     <head>
@@ -26,54 +26,59 @@
 
     <body class="grid">
         <!-- begin wrapper, wraps header and main, keeps footer and the bottom -->
-    <div class="wrapper">
-        <!-- Begin document header -->
-        <header role="banner">
-            <div class="header-grid">
-                <!-- Begin navigation menu -->
-                <span>
-                    <a href="index.html"><img src="img/logo.jpg" alt="" id="logo"></a>
-                </span>
-                <nav role="navigation">
-                    <ul>
-                        <li><a href="index.html"><i class="fas fa-home"></i> home</a></li>
-                        <li><a href="game.html" id="current"><i class="fas fa-gamepad"></i> game</a></li>
-                        <li><a href="rankings.html"><i class="fas fa-trophy"></i> rankings</a></li>
-                        <li><a href="account.html"><i class="fas fa-user"></i> account</a></li>
-                    </ul>
-                </nav>
-                <!-- End navigation menu -->
-            </div>
-        </header>
-        <!-- End document header -->
-        <!-- Begin document main -->
-        <main role="main" class="main-grid">
-            <!-- Begin main grid right column -->
-            <div class="right-col">
-                <section>
-                    <h1 class="main-heading">Start Playing</h1>
-                    <canvas id="canvas">Your browser does not
-                        support html5 canvas</canvas>
-                </section>
-            </div>
-            <!-- End main grid right column -->
-            <!-- Begin main grid left column -->
-            <div class="left-col">
-                <section>
-                    <h2 class="secondary-heading">Game Commands</h2>
-                    <p>game commands
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                    </p>
-                </section>
-            </div>
-            <!-- End main grid left column -->
-        </main>
-        <!-- End document main -->
-    </div>
-    <!-- end wrapper (header and main) -->
+        <div class="wrapper">
+            <!-- Begin document header -->
+            <header role="banner">
+                <div class="header-grid">
+                    <span>
+                        <a href="index.html"><img src="img/logo.jpg" alt="" id="logo"></a>
+                    </span>
+                    <!-- Begin navigation menu -->
+                    <nav role="navigation">
+                        <ul>
+                            <li><a href="index.html"><i class="fas fa-home"></i> home</a></li>
+                            <li><a href="game.html" id="current"><i class="fas fa-gamepad"></i> game</a></li>
+                            <li><a href="rankings.html"><i class="fas fa-trophy"></i> rankings</a></li>
+                            <li><a href="account.html"><i class="fas fa-user"></i> account</a></li>
+                        </ul>
+                    </nav>
+                    <!-- End navigation menu -->
+                </div>
+            </header>
+            <!-- End document header -->
+            <!-- Begin document main -->
+            <main role="main" class="main-grid">
+                <!-- Begin main grid right column -->
+                <div class="right-col">
+                    <section>
+                        <h1 class="main-heading">Start Playing</h1>
+                        <canvas id="canvas">Your browser does not
+                            support html5 canvas</canvas>
+                        <form id="game-command">
+                            <label for="command">Game Command</label>
+                            <input type="text" name="command" id="command">
+                            <button type="submit">Run</button>
+                        </form>
+                    </section>
+                </div>
+                <!-- End main grid right column -->
+                <!-- Begin main grid left column -->
+                <div class="left-col">
+                    <section>
+                        <h2 class="secondary-heading">Game Commands</h2>
+                        <p>game commands
+                            <br>game command
+                            <br>game command
+                            <br>game command
+                            <br>game command
+                        </p>
+                    </section>
+                </div>
+                <!-- End main grid left column -->
+            </main>
+            <!-- End document main -->
+        </div>
+        <!-- end wrapper (header and main) -->
         <!-- Begin document footer -->
         <footer role="contentinfo">
             <div class="footer-grid">
@@ -84,7 +89,7 @@
                         <p><i class="fas fa-phone-square"></i> Phone: 0201 234 5678</p>
                     </address>
                 </div>
-                <div class="copyright"><small>&copy; Copyright 2018 - All rights reserved</small></div>
+                <div class="copyright"><small>&copy; Copyright 2018 - Beshoy Bebawe</small></div>
             </div>
         </footer>
         <!-- End document footer -->

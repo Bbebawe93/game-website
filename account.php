@@ -1,6 +1,6 @@
 <?php
 // include head.php to call common function in the page
-include "php-include/head.php";
+include("php-include/head.php");
 
 // call output_head() function to output document head
 output_head("Account", "page description");
@@ -15,7 +15,7 @@ output_header("Account");
  <main role="main" class="main-grid">
                 <!-- Begin main grid right column -->
                 <div class="right-col">
-                    <article role="article">
+                    <section>
                         <h1 class="main-heading">Register for a new Account</h1>
                         <!-- Registration form -->
                         <form id="registration-form" class="" action="" method="POST">
@@ -49,7 +49,7 @@ output_header("Account");
                                 <button type="reset" class="clear-button">Clear</button>
                             </fieldset>
                         </form>
-                    </article>
+                    </section>
                 </div>
                 <!-- End main grid right column -->
                 <!-- Begin main grid left column -->

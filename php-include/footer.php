@@ -1,7 +1,8 @@
 <?php
-// outputs the footer element, uses date object to update copyright
+# function outputs the footer element, uses date object to update copyright year
 function output_footer() {
     $current_year = date("Y");
+    # begin heredoc FOOTER
     echo <<<FOOTER
     <!-- Begin document footer -->
     <footer role="contentinfo">
@@ -23,5 +24,6 @@ function output_footer() {
 </html>
 <!-- End html5 document -->
 FOOTER;
-} // end function
+# end heredoc FOOTER
+} # end function
 ?>

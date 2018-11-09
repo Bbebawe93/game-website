@@ -1,0 +1,46 @@
+body {
+    margin: 0px; 
+    padding: 0px;
+}
+main {
+    border: 2px solid crimson;
+}
+.site-img img {
+    max-width: 100%;
+}
+footer p {
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    font-weight: bold;
+}
+.course-info {
+    text-align: center;
+}
+
+.report-body, .contents {
+    margin-top: 50px;
+}
+
+.contents {
+    padding: 30px;
+}
+.contents p:first-child {
+    padding: 20px;
+    font-weight: bold;
+}
+ul {
+    list-style: none;
+}
+
+.nav-link {
+    margin: 0px;
+    padding: 0px;
+}
+.nav-link:hover {
+    background-color: yellowgreen;
+}
+dt {
+    background-color: yellowgreen;
+    margin-top: 10px;
+}

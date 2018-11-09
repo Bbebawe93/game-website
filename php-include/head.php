@@ -1,10 +1,11 @@
 <?php
-// outputs head element contents, takes page title and description as arguments
+# function outputs head element contents, takes page title and description as arguments
 function output_head($page_title, $page_description) {
+    # begin heredoc HEAD
     echo <<<HEAD
 <!doctype html>
 <!-- Begin html5 document -->
-<html lang="en-GB">
+<html lang="en">
     <!-- Begin head element -->
     <head>
         <meta charset="utf-8">
@@ -26,6 +27,6 @@ function output_head($page_title, $page_description) {
     </head>
     <!-- End head element -->
 HEAD;
-
-} // end function
+# end heredoc HEAD
+} # end function
 ?>
