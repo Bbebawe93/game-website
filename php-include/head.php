@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 5baab61aece2e919f5d638f54a6e79f0092fb14b
 <?php
 # function outputs head element contents, takes page title and description as arguments
 function output_head($page_title, $page_description) {
@@ -29,4 +33,42 @@ function output_head($page_title, $page_description) {
 HEAD;
 # end heredoc HEAD
 } # end function
+<<<<<<< HEAD
 ?>
+=======
+?>
+=======
+<?php
+// prints head element contents, page title and description as arguments
+function output_head($page_title, $page_description)
+{
+    $head = <<<HEAD
+<!doctype html>
+<!-- Begin html5 document -->
+<html lang="en-GB">
+    <!-- Begin head element -->
+    <head>
+        <meta charset="utf-8">
+        <title>$page_title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="$page_description">
+        <meta name="author" content="Beshoy Bebawe">
+        <!-- Font Awesome icons cdn -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+            crossorigin="anonymous">
+        <!-- Google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Finger+Paint" rel="stylesheet">
+        <!-- CSS external stylesheet -->
+        <link rel="stylesheet" href="css/main.css">
+        <!-- Html5 shim for legacy browsers support, hosted by google -->
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <!-- End head element -->
+HEAD;
+
+    echo $head;
+} // end function
+>>>>>>> cb839bf45b6e273b96689bd7545594bbf9a0d994
+>>>>>>> 5baab61aece2e919f5d638f54a6e79f0092fb14b
