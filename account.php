@@ -1,4 +1,4 @@
-<?php
+<?php 
 // include head.php to call common function in the page
 include("php-include/head.php");
 
