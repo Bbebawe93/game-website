@@ -22,7 +22,7 @@ output_header("Game");
                         <form id="game-command">
                         <label for="command">Game Command</label>
                         <input type="text" name="command" id="command">
-                        <button type="submit">Run</button>
+                        <button type="button" id="submit-btn">Run</button>
                         </form>
                 </section>
             </div>
