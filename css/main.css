@@ -1,4 +1,3 @@
-
 /* Global styles 
 ================*/
 
@@ -17,7 +16,7 @@ footer {
 }
 
 #game-command {
-    width: 70%; 
+    width: 70%;
     margin: 0 auto;
 }
 /* Images styles
@@ -124,7 +123,7 @@ footer {
 }
 
 #logo:hover {
-    opacity: .5;
+    opacity: 0.5;
 }
 
 #logo a {
@@ -157,9 +156,8 @@ nav ul a {
     padding: 10px;
     text-transform: capitalize;
     letter-spacing: 2.5px;
-    transition: border .5s;
+    transition: border 0.5s;
     font-weight: bold;
-
 }
 
 nav ul a:hover {
@@ -168,7 +166,6 @@ nav ul a:hover {
     border: 5px solid springgreen;
     font: 24px;
     box-shadow: 0 0 20px;
-
 }
 
 nav ul a:active {
@@ -189,7 +186,7 @@ nav ul a#current {
 .third-heading {
     background-color: #2e4056;
     color: rgba(0, 255, 128, 0.76);
-    font-family: 'Finger Paint', cursive;
+    font-family: "Finger Paint", cursive;
     padding: 5px;
     text-align: center;
     box-shadow: #2e4056 0 0 20px;
@@ -310,7 +307,7 @@ form .icon {
 #register-button:hover,
 #login-button:hover,
 .clear-button:hover {
-    opacity: .5;
+    opacity: 0.5;
 }
 
 .clear-button {
@@ -324,7 +321,7 @@ form .icon {
 }
 
 .login-reg-btn {
-    background-color: #4CAF50;
+    background-color: #4caf50;
     color: white;
     font-size: 20px;
     font-weight: bold;
@@ -339,7 +336,7 @@ form .icon {
 }
 
 .login-reg-btn:hover {
-    opacity: .5;
+    opacity: 0.5;
 }
 
 #login-button {
@@ -348,7 +345,7 @@ form .icon {
     display: block;
     width: 100%;
     margin: 30px auto 10px auto;
-    background-color: #4CAF50;
+    background-color: #4caf50;
     padding: 10px;
     font-weight: bold;
 }
@@ -356,9 +353,38 @@ form .icon {
 /* Canvas styles 
 =================*/
 
-#canvas {
+#game-canvas {
     width: 100%;
     margin: 0 auto;
     height: 500px;
     border: 1px solid #2e4056;
+}
+#game-command {
+    width: 60%;
+    margin: 0 auto;
+}
+#command-error {
+    background-color: wheat;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 25px;
+}
+.game-commands ul {
+    width: 90%;
+    margin: 0 auto;
+    background-color: wheat;
+
+}
+.game-commands li {
+    list-style-type: none;
+    font-size: 18px;
+    border-bottom: 3px solid white;
+    margin: 3px;
+    padding: 5px;
+}
+.game-commands li span {
+    font-weight: bold;
+    color: red;
 }

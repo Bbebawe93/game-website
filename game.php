@@ -17,9 +17,10 @@ output_header("Game");
             <div class="right-col">
                 <section>
                     <h1 class="main-heading">Start Playing</h1>
-                    <canvas id="canvas">Your browser does not
+                    <canvas id="game-canvas">Your browser does not
                         support html5 canvas</canvas>
                         <form id="game-command">
+                        <div id="command-error"></div>
                         <label for="command">Game Command</label>
                         <input type="text" name="command" id="command">
                         <button type="button" id="submit-btn">Run</button>
@@ -31,17 +32,24 @@ output_header("Game");
             <div class="left-col">
                 <section>
                     <h2 class="secondary-heading">Game Commands</h2>
-                    <p>game commands
-                        <br>game command
-                        <br>game command
-                        <br>game command
-                        <br>game command
-                    </p>
+                    <div class="game-commands">
+                        <ul>
+                            <li><span>start</span> => start the game</li>
+                            <li><span>stop</span> => stop the game</li>
+                            <li><span>mr</span> => moves paddle to right 20px</li>
+                            <li><span>mr2</span> => moves paddle to right 40px</li>
+                            <li><span>mr3</span> => moves paddle to right 60px</li>
+                            <li><span>ml</span> => moves paddle to left 20px</li>
+                            <li><span>ml2</span> => moves paddle to left 40px</li>
+                            <li><span>ml3</span> => moves paddle to left 60px</li>
+                        </ul>
+                    </div>
                 </section>
             </div>
             <!-- End main grid left column -->
         </main>
         <!-- End document main -->
+        <script type="text/javascript" src="js/script.js"></script>
     </div>
     <!-- end wrapper (header and main) -->
 <?php
