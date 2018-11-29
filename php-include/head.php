@@ -1,6 +1,7 @@
 <?php
 # function outputs head element contents, takes page title and description as arguments
-function output_head($page_title, $page_description) {
+function output_head($page_title, $page_description)
+{
     # begin heredoc HEAD
     echo <<<HEAD
 <!doctype html>
@@ -29,4 +30,3 @@ function output_head($page_title, $page_description) {
 HEAD;
 # end heredoc HEAD
 } # end function
-?>

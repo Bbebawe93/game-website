@@ -192,6 +192,7 @@ nav ul a#current {
     box-shadow: #2e4056 0 0 20px;
     border-radius: 20px;
     font-weight: normal;
+    margin-top: 30px;
 }
 
 /* footer styles 
@@ -269,15 +270,32 @@ input:focus {
 
 label {
     display: inline-block;
-    margin: 20px 10px 5px 10px;
+    margin: 20px 5px 5px 10px;
     font-weight: bold;
 }
 
 form span {
-    color: red;
-    margin-left: 10px;
+    display: inline-block;
+    padding: 5px;
+    font-weight: normal;
+    margin-left: 45px;
+    width: 90%;
 }
-
+form .success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+} 
+form .error {
+    color: #D8000C;
+    background-color: #FFD2D2;
+}
+form .info {
+    color: #00529B;
+    background-color: #BDE5F8;
+}
+#reg-error {
+    margin-top: 20px;
+}
 .form-grid {
     width: 100%;
     height: 25px;
@@ -296,7 +314,7 @@ form .icon {
 #register-button {
     display: block;
     width: 100%;
-    margin: 30px auto 10px auto;
+    margin: 10px auto 10px auto;
     background-color: dodgerblue;
     color: white;
     border: none;
@@ -387,4 +405,15 @@ form .icon {
 .game-commands li span {
     font-weight: bold;
     color: red;
+}
+
+#reg-section {
+    display: grid; 
+    grid-template-columns: 2fr 1fr;
+}
+.reg-col {
+    grid-column: 1;
+}
+.message-col {
+    grid-column: 2;
 }

@@ -1,6 +1,6 @@
-<?php 
+<?php
 // include head.php to call common function in the page
-include("php-include/head.php");
+include "php-include/head.php";
 
 // call output_head() function to output document head
 output_head("Account", "page description");
@@ -23,33 +23,34 @@ output_header("Account");
                                 <legend>&nbsp;&nbsp;Please fill in this registration form to create an
                                     account&nbsp;&nbsp;</legend>
                                 <hr>
-                                <label for="full-name">Full Name:</label><span id="full-name-error"> error message
+                                <label for="first-name">First Name:</label><span id="first-name-error">
                                 </span>
                                 <div class="form-grid">
                                     <i class="fas fa-id-card icon"></i>
-                                    <input type="text" name="full-name" id="full-name">
+                                    <input type="text" name="first-name" id="first-name" required>
                                 </div>
-
+                                <label for="last-name">Last Name:</label><span id="last-name-error">
+                                </span>
+                                <div class="form-grid">
+                                    <i class="fas fa-id-card icon"></i>
+                                    <input type="text" name="last-name" id="last-name" required>
+                                </div>
                                 <label for="reg-username">Username:</label><span id="username-error"></span>
                                 <div class="form-grid">
                                     <i class="fa fa-user icon"></i>
-                                    <input type="text" name="username" id="reg-username">
-                                </div>
-                                <label for="email">Email:</label><span id="email-error"></span>
-                                <div class="form-grid">
-                                    <i class="fa fa-envelope icon"></i>
-                                    <input type="email" name="email" id="email">
+                                    <input type="text" name="username" id="reg-username" required>
                                 </div>
                                 <label for="reg-password">Password:</label><span id="reg-password-error"></span>
                                 <div class="form-grid">
                                     <i class="fas fa-key icon"></i>
-                                    <input type="password" name="reg-password" id="reg-password">
+                                    <input type="password" name="reg-password" id="reg-password" required>
                                 </div>
+                                <span id="reg-error"></span>
                                 <button type="submit" id="register-button">Register</button>
                                 <button type="reset" class="clear-button">Clear</button>
                             </fieldset>
                         </form>
-                    </section>
+                </section>
                 </div>
                 <!-- End main grid right column -->
                 <!-- Begin main grid left column -->
@@ -80,10 +81,13 @@ output_header("Account");
                 <!-- End main grid left column -->
             </main>
             <!-- End document main -->
+            <script type="text/javascript" src="js/register.js"></script>
+            <script type="text/javascript" src="js/user.js"></script>
+
         </div>
         <!-- end wrapper (header and main) -->
 <?php
-// include footer.php to call footer function 
+// include footer.php to call footer function
 include "php-include/footer.php";
 
 // call output_footer function to output document footer
