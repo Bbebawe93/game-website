@@ -13,6 +13,7 @@ var lastNameMessage = document.querySelector("#last-name-error");
 var usernameMessage = document.querySelector("#username-error");
 var passwordMessage = document.querySelector("#reg-password-error");
 var regErrorMessage = document.querySelector("#reg-error");
+
 // regular expressions
 var digitReg = /[0-9]/;
 var stringReg = /^[a-zA-Z]+$/;
@@ -27,29 +28,22 @@ var validForm = {
   validPassword: false
 };
 
-// user
+// temporary user variables 
 var userFirstName;
 var userLastName;
 var userUsername;
 var userPassword;
 
-// user constructor
-function User(firstName, lastName, username, password, score, lives) {
-  this.firstName = firstName;
-  this.lastName = lastName;
-  this.username = username;
-  this.password = password;
-  this.score = score;
-  this.lives = lives;
-}
 
 // registration form validation functions
+
 // firstName validation function
 firstName.onfocus = function () {
-  firstNameMessage.classList.add("info");
+  firstNameMessage.className = "info";
   firstNameMessage.innerHTML =
     "<i class='fas fa-info-circle'></i> please enter your first name";
 };
+
 firstName.onblur = function () {
   let valid = true;
   var errorMessage = "<i class='fas fa-times-circle'></i> ";
@@ -63,24 +57,20 @@ firstName.onblur = function () {
     valid = false;
   }
   if (!valid) {
-    firstNameMessage.classList.remove("info");
-    firstNameMessage.classList.add("error");
+    firstNameMessage.className = "error";
     firstNameMessage.innerHTML = errorMessage;
   } else if (valid) {
     validForm.validFirstName = true;
     userFirstName = firstNameValue;
-    firstNameMessage.classList.remove("info");
-    firstNameMessage.classList.remove("error");
-    firstNameMessage.classList.add("success");
+    firstNameMessage.className = "success";
     firstNameMessage.innerHTML = "<i class='fas fa-check-circle'></i>";
   }
 };
 
 // lastName validation function
 lastName.onfocus = function () {
-  lastNameMessage.classList.add("info");
-  lastNameMessage.innerHTML =
-    "<i class='fas fa-info-circle'></i> please enter your last name";
+  lastNameMessage.className = "info";
+  lastNameMessage.innerHTML = "<i class='fas fa-info-circle'></i> please enter your last name";
 };
 lastName.onblur = function () {
   let valid = true;
@@ -95,22 +85,19 @@ lastName.onblur = function () {
     valid = false;
   }
   if (!valid) {
-    lastNameMessage.classList.remove("info");
-    lastNameMessage.classList.add("error");
+    lastNameMessage.className = "error";
     lastNameMessage.innerHTML = errorMessage;
   } else if (valid) {
     validForm.validLastName = true;
     userLastName = lastNameValue;
-    lastNameMessage.classList.remove("info");
-    lastNameMessage.classList.remove("error");
-    lastNameMessage.classList.add("success");
+    lastNameMessage.className = "success";
     lastNameMessage.innerHTML = "<i class='fas fa-check-circle'></i>";
   }
 };
 
 // username validation function
 username.onfocus = function () {
-  usernameMessage.classList.add("info");
+  usernameMessage.className = "info";
   usernameMessage.innerHTML =
     "<i class='fas fa-info-circle'></i> must be 5 characters or more, includes letters and digits only";
 };
@@ -130,27 +117,24 @@ username.onblur = function () {
     errorMessage += "too short";
     valid = false;
   }
-  if (localStorage[usernameValue] != undefined) {
+  if (registeredUser(usernameValue)) {
     errorMessage += "username exists";
     valid = false;
   }
   if (!valid) {
-    usernameMessage.classList.remove("info");
-    usernameMessage.classList.add("error");
+    usernameMessage.className = "error";
     usernameMessage.innerHTML = errorMessage;
   } else if (valid) {
     validForm.validUsername = true;
     userUsername = usernameValue;
-    usernameMessage.classList.remove("info");
-    usernameMessage.classList.remove("error");
-    usernameMessage.classList.add("success");
+    usernameMessage.className = "success";
     usernameMessage.innerHTML = "<i class='fas fa-check-circle'></i>";
   }
 };
 
 // password validation function
 password.onfocus = function () {
-  passwordMessage.classList.add("info");
+  passwordMessage.className = "info";
   passwordMessage.innerHTML =
     "<i class='fas fa-info-circle'></i> must be 5 characters or more, includes letters and digits only";
 };
@@ -171,19 +155,30 @@ password.onblur = function () {
     valid = false;
   }
   if (!valid) {
-    passwordMessage.classList.remove("info");
-    passwordMessage.classList.add("error");
+    passwordMessage.className = "error";
     passwordMessage.innerHTML = errorMessage;
   } else if (valid) {
     validForm.validPassword = true;
     userPassword = passwordValue;
-    passwordMessage.classList.remove("info");
-    passwordMessage.classList.remove("error");
-    passwordMessage.classList.add("success");
+    passwordMessage.className = "success";
     passwordMessage.innerHTML = "<i class='fas fa-check-circle'></i>";
   }
 };
 
+// function to clear the form after submission 
+function clearForm() {
+  registrationFrom.reset();
+  firstNameMessage.className = "";
+  lastNameMessage.className = "";
+  usernameMessage.className = "";
+  passwordMessage.className = "";
+  firstNameMessage.innerHTML = "";
+  lastNameMessage.innerHTML = "";
+  usernameMessage.innerHTML = "";
+  passwordMessage.innerHTML = "";
+
+
+}
 registrationFrom.onsubmit = function (e) {
   var submit = true;
   for (key in validForm) {
@@ -192,18 +187,15 @@ registrationFrom.onsubmit = function (e) {
     }
   }
   if (!submit) {
-    regErrorMessage.classList.add("error");
+    regErrorMessage.className = "error";
     regErrorMessage.innerHTML =
       "<i class='fas fa-info-circle'></i> please fill up the form correctly";
   } else if (submit) {
     e.preventDefault();
-    regErrorMessage.classList.remove("error");
-    regErrorMessage.classList.add("success");
-    regErrorMessage.innerHTML =
-      "<i class='fas fa-check-circle'></i> user registered successfully";
-
-    var newUser = new User(
-      userFirstName, userLastName, userUsername, userPassword);
-    localStorage[newUser.username] = JSON.stringify(newUser);
+    regErrorMessage.className = "success";
+    addUsers(userFirstName, userLastName, userUsername, userPassword);
+    clearForm();
+    regErrorMessage.innerHTML = "<i class='fas fa-check-circle'></i> user registered successfully";
+    registrationFrom.classList.toggle("hide");
   }
 };

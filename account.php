@@ -23,24 +23,32 @@ output_header("Account");
                                 <legend>&nbsp;&nbsp;Please fill in this registration form to create an
                                     account&nbsp;&nbsp;</legend>
                                 <hr>
-                                <label for="first-name">First Name:</label><span id="first-name-error">
-                                </span>
+                            <div class="label-grid">
+                                <label for="first-name">First Name:</label><span id="first-name-error"></span>
+                            </div>
+
                                 <div class="form-grid">
                                     <i class="fas fa-id-card icon"></i>
                                     <input type="text" name="first-name" id="first-name" required>
                                 </div>
+                                <div class="label-grid">
                                 <label for="last-name">Last Name:</label><span id="last-name-error">
                                 </span>
+</div>
                                 <div class="form-grid">
                                     <i class="fas fa-id-card icon"></i>
                                     <input type="text" name="last-name" id="last-name" required>
                                 </div>
+                                <div class="label-grid">
                                 <label for="reg-username">Username:</label><span id="username-error"></span>
+</div>
                                 <div class="form-grid">
                                     <i class="fa fa-user icon"></i>
                                     <input type="text" name="username" id="reg-username" required>
                                 </div>
+                                <div class="label-grid">
                                 <label for="reg-password">Password:</label><span id="reg-password-error"></span>
+</div>
                                 <div class="form-grid">
                                     <i class="fas fa-key icon"></i>
                                     <input type="password" name="reg-password" id="reg-password" required>
@@ -62,15 +70,19 @@ output_header("Account");
                             <fieldset>
                                 <legend>&nbsp;&nbsp;Please fill in form to login to your account&nbsp;&nbsp;</legend>
                                 <hr>
+                                <div class="label-grid">
                                 <label for="log-username">Username: </label><span id="log-username-error"></span>
+</div>
                                 <div class="form-grid">
                                     <i class="fa fa-user icon"></i>
-                                    <input type="text" name="log-username" id="log-username">
+                                    <input type="text" name="log-username" id="log-username" required>
                                 </div>
+                                <div class="label-grid">
                                 <label for="log-password">Password: </label>
+</div>
                                 <div class="form-grid">
                                     <i class="fas fa-key icon"></i>
-                                    <input type="password" name="log-password" id="log-password">
+                                    <input type="password" name="log-password" id="log-password" required>
                                 </div>
                                 <button type="submit" id="login-button">Login</button>
                                 <button type="reset" class="clear-button">Clear</button>
@@ -82,8 +94,9 @@ output_header("Account");
             </main>
             <!-- End document main -->
             <script type="text/javascript" src="js/register.js"></script>
-            <script type="text/javascript" src="js/user.js"></script>
             <script type="text/javascript" src="js/login.js"></script>
+            <script type="text/javascript" src="js/user.js"></script>
+
 
 
         </div>

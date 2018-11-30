@@ -1,0 +1,1 @@
+var rankingTable = document.getElementById("ranking-table");

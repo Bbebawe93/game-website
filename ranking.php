@@ -59,7 +59,7 @@ output_header("Ranking");
                 <!-- End main grid right column -->
                 <!-- Begin main grid left column -->
                 <aside>
-                    <<div class="left-col ">
+                    <div class="left-col ">
                     <img src="img/Placeholder.png" alt="" title="" class="side-img">
                     <img src="img/Placeholder.png" alt="" title="" class="side-img">
                     <img src="img/Placeholder.png" alt="" title="" class="side-img">
