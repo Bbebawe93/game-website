@@ -49,6 +49,31 @@ output_header("Ranking");
                                 <td class="player-name"></td>
                                 <td class="player-score"></td>
                             </tr>
+                            <tr>
+                                <td class="ranking-number"></td>
+                                <td class="player-name"></td>
+                                <td class="player-score"></td>
+                            </tr>
+                            <tr>
+                            <td class="ranking-number"></td>
+                                <td class="player-name"></td>
+                                <td class="player-score"></td>
+                            </tr>
+                            <tr>
+                            <td class="ranking-number"></td>
+                                <td class="player-name"></td>
+                                <td class="player-score"></td>
+                            </tr>
+                            <tr>
+                            <td class="ranking-number"></td>
+                                <td class="player-name"></td>
+                                <td class="player-score"></td>
+                            </tr>
+                            <tr>
+                            <td class="ranking-number"></td>
+                                <td class="player-name"></td>
+                                <td class="player-score"></td>
+                            </tr>
                         </table>
                         <br>
                         <h2 class="secondary-heading">Improve your Ranking</h2>

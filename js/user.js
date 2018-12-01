@@ -37,6 +37,7 @@ function registeredUser(username) {
     }
     return registeredUser
 }
+
 // function to check if user username and password match local storage 
 function UserLogin(username, password) {
     var userFound;
@@ -61,4 +62,15 @@ function UserLogin(username, password) {
         return false;
     }
 }
-
+// function return user if username and password matches 
+function fetchUser(username) {
+    var user; 
+    var users = getUsers();
+    for(i = 0; i < users.length; i++) {
+        if(users[i].username === username) {
+            user = users[i];
+            break;
+        }
+    }
+    return user;
+}

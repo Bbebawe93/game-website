@@ -25,12 +25,12 @@ function sortUsers() {
 var sortedUsers = sortUsers();
 
 // print users data to ranking table, prints only 10 users 
-for (i = 0; i < 10; i++) {
-    // this will will stop the loop and prevent it from reading undefined objects
-    if (i == sortedUsers.length) {
-        break;
-    }
+for (i = 0; i < sortedUsers.length; i++) { 
     playerRanking[i].innerHTML = (i + 1);
     playerName[i].innerHTML = sortedUsers[i].firstName + " " + sortedUsers[i].lastName;
     playerScore[i].innerHTML = sortedUsers[i].score;
+      // this will will stop the loop and prevent it from reading undefined objects
+    if (i == 10) {
+        break;
+    }
 }

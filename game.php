@@ -36,12 +36,12 @@ output_header("Game");
                         <ul>
                             <li><span>start</span> => start the game</li>
                             <li><span>stop</span> => stop the game</li>
-                            <li><span>mr</span> => moves paddle to right 20px</li>
-                            <li><span>mr2</span> => moves paddle to right 40px</li>
-                            <li><span>mr3</span> => moves paddle to right 60px</li>
-                            <li><span>ml</span> => moves paddle to left 20px</li>
-                            <li><span>ml2</span> => moves paddle to left 40px</li>
-                            <li><span>ml3</span> => moves paddle to left 60px</li>
+                            <li><span>r</span> => moves paddle to right 20px</li>
+                            <li><span>r2</span> => moves paddle to right 40px</li>
+                            <li><span>r3</span> => moves paddle to right 60px</li>
+                            <li><span>l</span> => moves paddle to left 20px</li>
+                            <li><span>l2</span> => moves paddle to left 40px</li>
+                            <li><span>l3</span> => moves paddle to left 60px</li>
                         </ul>
                     </div>
                 </section>
@@ -49,7 +49,9 @@ output_header("Game");
             <!-- End main grid left column -->
         </main>
         <!-- End document main -->
-        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="js/user.js"></script>
+        
+        <script type="text/javascript" src="js/game.js"></script>
     </div>
     <!-- end wrapper (header and main) -->
 <?php

@@ -304,7 +304,7 @@ input:focus {
 
 }
 
-form .success {
+form .success, .success {
     color: #4F8A10;
     background-color: #DFF2BF;
 }
@@ -401,17 +401,24 @@ form .icon {
     font-weight: bold;
 }
 
+#reg-message {
+    font-weight: bold;
+    margin-top: 100px;
+    padding: 50px;
+    text-align: center;
+}
 /* Canvas styles 
 =================*/
 
 #game-canvas {
-    width: 100%;
+    display: block;
+  
     margin: 0 auto;
-    height: 500px;
     border: 1px solid #2e4056;
 }
 
 #game-command {
+    display: block;
     width: 60%;
     margin: 0 auto;
 }
@@ -465,4 +472,23 @@ form .icon {
 }
 .hide  {
     display: none;
+}
+
+.user-profile {
+    padding: 20px;
+    font-size: 24px;
+}
+#logout-btn {
+    display: block;
+    color: #00529B;
+    background-color: #BDE5F8;
+    border: none;
+    padding: 20px;
+    width: 200px;
+    margin: 20px auto;
+    font-size: 24px;
+}
+#logout-btn:hover {
+    opacity: .5;
+    color: red;
 }

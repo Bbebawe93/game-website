@@ -29,7 +29,7 @@ function output_header($current_page) {
                         <a href="index.php"><img src="img/logo.jpg" alt="" id="logo"></a>
                     </span>
                     <nav role="navigation">
-                        <ul>
+                        <ul id="nav-links">
 
 HEADER_START;
 # end heredoc HEADER_START
