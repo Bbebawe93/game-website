@@ -8,6 +8,9 @@ function User(firstName, lastName, username, password, score, lives) {
     this.lives = lives;
 }
 
+// create users array 
+var users = new Array();
+
 // function to get registered users from local storage using JSON
 // function return empty array if no users are registered
 function getUsers() {
@@ -15,9 +18,9 @@ function getUsers() {
 }
 
 // function to save users to local storages using JSON 
-function addUsers(userFirstName, userLastName, userUsername, userPassword) {
+function addUsers(userFirstName, userLastName, userUsername, userPassword, score, lives) {
     users = getUsers();
-    var newUser = new User(userFirstName, userLastName, userUsername, userPassword);
+    var newUser = new User(userFirstName, userLastName, userUsername, userPassword, score, lives);
     users.push(newUser);
     localStorage.setItem("registeredUsers", JSON.stringify(users));
 }
@@ -59,5 +62,3 @@ function UserLogin(username, password) {
     }
 }
 
-// create users array 
-var users = new Array();

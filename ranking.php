@@ -25,29 +25,29 @@ output_header("Ranking");
                                 <th>Score</th>
                             </tr>
                             <tr>
-                                <td>1</td>
-                                <td>Beshoy bebawe</td>
-                                <td>9</td>
+                                <td class="ranking-number"></td>
+                                <td class="player-name"></td>
+                                <td class="player-score"></td>
                             </tr>
                             <tr>
-                                <td>1</td>
-                                <td>Beshoy</td>
-                                <td>9</td>
+                            <td class="ranking-number"></td>
+                                <td class="player-name"></td>
+                                <td class="player-score"></td>
                             </tr>
                             <tr>
-                                <td>1</td>
-                                <td>Beshoy</td>
-                                <td>9</td>
+                            <td class="ranking-number"></td>
+                                <td class="player-name"></td>
+                                <td class="player-score"></td>
                             </tr>
                             <tr>
-                                <td>1</td>
-                                <td>Beshoy</td>
-                                <td>9</td>
+                            <td class="ranking-number"></td>
+                                <td class="player-name"></td>
+                                <td class="player-score"></td>
                             </tr>
                             <tr>
-                                <td>1</td>
-                                <td>Beshoy</td>
-                                <td>9</td>
+                            <td class="ranking-number"></td>
+                                <td class="player-name"></td>
+                                <td class="player-score"></td>
                             </tr>
                         </table>
                         <br>
@@ -68,6 +68,9 @@ output_header("Ranking");
                 <!-- End main grid left column -->
             </main>
             <!-- End document main -->
+            <!-- javascript links --> 
+            <script type="text/javascript" src="js/user.js"></script>
+            <script type="text/javascript" src="js/ranking.js"></script>
         </div>
         <!-- end wrapper (header and main) -->
 <?php

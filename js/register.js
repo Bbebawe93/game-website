@@ -193,7 +193,7 @@ registrationFrom.onsubmit = function (e) {
   } else if (submit) {
     e.preventDefault();
     regErrorMessage.className = "success";
-    addUsers(userFirstName, userLastName, userUsername, userPassword);
+    addUsers(userFirstName, userLastName, userUsername, userPassword, 0, 3);
     clearForm();
     regErrorMessage.innerHTML = "<i class='fas fa-check-circle'></i> user registered successfully";
     registrationFrom.classList.toggle("hide");

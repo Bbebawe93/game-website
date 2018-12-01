@@ -93,12 +93,10 @@ output_header("Account");
                 <!-- End main grid left column -->
             </main>
             <!-- End document main -->
+            <!-- javascript links --> 
             <script type="text/javascript" src="js/register.js"></script>
             <script type="text/javascript" src="js/login.js"></script>
             <script type="text/javascript" src="js/user.js"></script>
-
-
-
         </div>
         <!-- end wrapper (header and main) -->
 <?php
