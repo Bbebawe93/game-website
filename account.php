@@ -105,6 +105,7 @@ output_header("Account");
             <script type="text/javascript" src="js/user.js"></script>
             <script type="text/javascript" src="js/login.js"></script>
             <script type="text/javascript" src="js/register.js"></script>
+
         </div>
         <!-- end wrapper (header and main) -->
 <?php

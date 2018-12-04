@@ -74,3 +74,54 @@ function fetchUser(username) {
     }
     return user;
 }
+
+function updateUserScore(username) {
+    var users = getUsers(); 
+    for(i = 0; i < users.length; i++) {
+        if(users[i].username === username) {
+            users[i].score +=1;
+        }
+    }
+    localStorage.registeredUsers = JSON.stringify(users);
+
+}
+
+function updateUserLives(username) {
+    var users = getUsers(); 
+    for(i = 0; i < users.length; i++) {
+        if(users[i].username === username) {
+            users[i].lives -=1;
+        }
+    }
+    localStorage.registeredUsers = JSON.stringify(users);
+}
+
+function addUserLives(username) {
+    var users = getUsers(); 
+    for(i = 0; i < users.length; i++) {
+        if(users[i].username === username) {
+            if(users[i].lives >= 6) {
+                alert("Lives at Max");
+            } else {
+                users[i].lives +=1;
+                alert("1 live added");
+
+            }
+        }
+    }
+    localStorage.registeredUsers = JSON.stringify(users);
+    window.location.reload();
+}
+
+// set the local storage values when game runs for the first time or when the user clear the local storage
+window.onload = function () {
+    if (localStorage.getItem("userLoggedIn") == null) {
+        localStorage.setItem("userLoggedIn", "none");
+        window.location.reload(); // reload the page to read the new values 
+    }
+    if (JSON.parse(localStorage.getItem("registeredUsers")) == null) {
+        localStorage.setItem("registeredUsers", JSON.stringify(users));
+        window.location.reload(); // reload the page to read the new values 
+    }
+}
+

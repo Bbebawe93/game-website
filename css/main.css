@@ -276,10 +276,10 @@ input:focus {
     grid-template-columns: 20% 80%;
     width: 100%;
 }
+
 .label-grid label {
     grid-column: 1;
     display: block;
-  
     font-weight: bold;
 }
 
@@ -288,10 +288,7 @@ input:focus {
     padding-top: 4px;
     display: block;
     font-weight: normal;
-    width: 100%;
     min-width: 100%;
-
-
 }
 
 #registration-form span {
@@ -304,7 +301,8 @@ input:focus {
 
 }
 
-form .success, .success {
+form .success,
+.success {
     color: #4F8A10;
     background-color: #DFF2BF;
 }
@@ -407,12 +405,13 @@ form .icon {
     padding: 50px;
     text-align: center;
 }
+
 /* Canvas styles 
 =================*/
 
 #game-canvas {
     display: block;
-  
+
     margin: 0 auto;
     border: 1px solid #2e4056;
 }
@@ -470,7 +469,8 @@ form .icon {
 .show {
     display: "";
 }
-.hide  {
+
+.hide {
     display: none;
 }
 
@@ -478,16 +478,33 @@ form .icon {
     padding: 20px;
     font-size: 24px;
 }
-#logout-btn {
+
+#logout-btn,
+#add-lives {
     display: block;
-    color: #00529B;
-    background-color: #BDE5F8;
+
     border: none;
     padding: 20px;
-    width: 200px;
+    width: 100%;
     margin: 20px auto;
     font-size: 24px;
 }
+
+#logout-btn {
+    color: #00529B;
+    background-color: #BDE5F8;
+}
+
+#add-lives {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+}
+
+#add-lives:hover {
+    opacity: .5;
+    color: red;
+}
+
 #logout-btn:hover {
     opacity: .5;
     color: red;

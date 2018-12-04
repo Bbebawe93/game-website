@@ -65,15 +65,25 @@ if (localStorage.userLoggedIn != "none") {
         "<br>Lives: " + loggedUser.lives;
     var logout = document.createElement("button");
     logout.id = "logout-btn";
-    var textNode = document.createTextNode("Logout");
-    logout.appendChild(textNode);
+    var logoutTextNode = document.createTextNode("Logout");
+    var addLives = document.createElement("button");
+    addLives.id = "add-lives";
+    var addLiveTextNode = document.createTextNode("Add Lives");
+    logout.appendChild(logoutTextNode);
+    addLives.appendChild(addLiveTextNode)
     userProfile.after(logout);
+    logout.after(addLives);
+
 
     logout.onclick = function () {
         localStorage.userLoggedIn = "none";
         window.location.reload();
     }
 
+    addLives.onclick = function() {
+        addUserLives(loggedUser.username);
+     
+    }
 } else if (localStorage.userLoggedIn == "none") {
     var registrationFrom = document.getElementById("registration-form");
     var head = document.querySelector(".main-heading");

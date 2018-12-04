@@ -14,32 +14,33 @@ var submitBtn = document.getElementById("submit-btn");
 const ENTER_KEY = 13;
 
 var startGame = false;
+var currentGameScore = 0;
+var ballMissed = false;
+var playerLoggedIn = false;
 
 
 // get logged user object 
 var player;
 if (localStorage.userLoggedIn != "none") {
-    player = loggedUser = fetchUser(localStorage.userLoggedIn);
+    player = fetchUser(localStorage.userLoggedIn);
+    playerLoggedIn = true;
 }
-var playerLoggedIn = false;
 
 function drawPlayerInformation() {
-    if (player) {
-        var firstName = player.firstName;
-        var lastName = player.lastName;
-        var score = player.score;
-        var lives = player.lives;
-        ctx.font = "30px Arial";
-        ctx.fillStyle = "red";
-        ctx.textAlign = "left";
-        ctx.fillText("Player: " + firstName + " " + lastName, 20, 30);
-        ctx.textAlign = "right";
-        ctx.fillText("Score: " + score + " - " + "Lives: " + lives, canvasWidth - 30, 30);
-        playerLoggedIn = true;
-    } else {
-        playerLoggedIn = false;
-    }
+    var player = fetchUser(localStorage.userLoggedIn);
+    var firstName = player.firstName;
+    var lastName = player.lastName;
+    var score = player.score;
+    var lives = player.lives;
+    ctx.font = "30px Arial";
+    ctx.fillStyle = "black";
+    ctx.textAlign = "left";
+    ctx.fillText("Player: " + firstName + " " + lastName, 20, 30);
+    ctx.textAlign = "right";
+    ctx.fillText("Score: " + currentGameScore + " - " + "Lives: " + lives, canvasWidth - 30, 30);
+    playerLoggedIn = true;
 }
+
 
 
 
@@ -64,15 +65,20 @@ var paddle = {
         if (this.x + this.width < canvas.width) {
             this.x += this.Dx;
         }
+    },
+    restPaddle: function () {
+        this.x = (canvasWidth - 150) / 2;
+        this.y = canvasHeight - 40;
     }
+
 };
 
 // ball object
 var ball = {
     x: canvasWidth / 2,
     y: paddle.y - 15,
-    Dy: 1,
-    Dx: 1,
+    Dy: 3,
+    Dx: 3,
     radius: 15,
     drawBall: function () {
         ctx.beginPath();
@@ -85,7 +91,6 @@ var ball = {
     bounceBall: function () {
         this.y -= this.Dy;
         this.x -= this.Dx;
-
         // ball is radius + x + radius for for right side to get the edge of ball we add radius
         // to get the left side of the ball we - radius
         if (this.x - this.radius < 0) {
@@ -95,6 +100,16 @@ var ball = {
         } else if (this.y - this.radius < 0) {
             this.Dy = -this.Dy;
         }
+    },
+    resetBall: function () {
+        this.x = canvasWidth / 2;
+        this.y = paddle.y - 15;
+        this.Dx = 0;
+        this.Dy = 0;
+    },
+    moveBall: function () {
+        this.Dx = 3;
+        this.Dy = 3;
     }
 };
 
@@ -127,7 +142,6 @@ function drawBricks() {
         brickArray[c] = [];
         for (var r = 0; r < rows; r++) {
             brickArray[c][r] = new Brick(x, y, width, height, false, false);
-
         }
     }
 }
@@ -147,7 +161,6 @@ function drawGrid() {
             brickArray[c][r].y = y;
             if (brickArray[c][r].hit != true) {
                 brickArray[c][r].draw();
-
             }
             y += height + padding;
             currentRow++;
@@ -171,34 +184,47 @@ function brickCollision() {
                     ball.Dy = -ball.Dy;
                 }
                 brickArray[c][r].hit = true;
-
                 if (brickArray[c][r].scoreAdded != true) {
-                    player.score++;
+                    updateUserScore(player.username);
+                    currentGameScore += 1;
                 }
                 brickArray[c][r].scoreAdded = true;
-
-
             }
         }
     }
 
 }
 
+function drawMissed() {
+    ctx.font = "30px Arial";
+    ctx.fillStyle = "red";
+    ctx.textAlign = "center";
+    ctx.fillText("You Missed it, run start command to play again", canvasWidth / 2, canvasHeight / 2);
+}
 
 // ball and paddle collision function 
-function collision() {
+function ballCollision() {
     if ((ball.y + ball.radius == paddle.y) && (ball.x > paddle.x) && (ball.x <= paddle.x + paddle.width)) {
         ball.Dy = -ball.Dy;
     } else if (ball.y > canvasHeight - paddle.height) {
-        setTimeout(document.location.reload(), 2000);
+        console.log(ball.y);
+        ball.resetBall();
+        ball.drawBall();
+        ball.Dx = 3;
+        ball.Dy = 3;
+        paddle.restPaddle();
+        startGame = false;
+        player.score -= 1;
+        updateUserLives(player.username);
+        ballMissed = true;
     }
-}
 
+}
 
 // adds event to run button, executes different functions depend on the user input
 
-    submitBtn.addEventListener("click", executeCommand);
-    document.addEventListener("keypress", keyPressHandler);
+submitBtn.addEventListener("click", executeCommand);
+document.addEventListener("keypress", keyPressHandler);
 
 
 
@@ -286,18 +312,34 @@ function executeCommand() {
 drawBricks();
 
 function init() {
-    requestAnimationFrame(init);
     ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-    drawPlayerInformation();
     if (playerLoggedIn) {
-        if (startGame == true) {
-            drawGrid();
-            paddle.drawPaddle();
-            ball.drawBall();
-            ball.bounceBall();
-        } else {
+        drawPlayerInformation();
+        if (player.lives > 0) {
+            if (startGame == true) {
+                drawGrid();
+                paddle.drawPaddle();
+                ball.drawBall();
+                ball.bounceBall();
+                brickCollision();
+                ballCollision();
+            } else {
+                if (ballMissed == false) {
+                    ctx.fillStyle = "green";
+                    ctx.textAlign = "center";
+                    ctx.fillText("run start command to start the game", canvasWidth / 2, canvasHeight / 2);
+                } else
+                if (ballMissed == true) {
+                    drawMissed();
+                }
+            }
+        } else if(player.lives <= 0){
+            ctx.fillStyle = "red";
             ctx.textAlign = "center";
-            ctx.fillText("run start command to start the game", canvasWidth / 2, canvasHeight / 2);
+            ctx.fillText("no lives, go to your account and add lives", canvasWidth / 2, canvasHeight / 2);
+            // disable input fields if user not logged in
+            command.disabled = true;
+            submitBtn.disabled = true;
         }
     } else {
         // disable input fields if user not logged in
@@ -308,8 +350,7 @@ function init() {
         ctx.textAlign = "center";
         ctx.fillText("sign in or register to start playing", canvasWidth / 2, canvasHeight / 2);
     }
-
-    brickCollision();
-    collision();
+    requestAnimationFrame(init);
 }
-window.onload = requestAnimationFrame(init);
+
+init();

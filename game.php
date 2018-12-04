@@ -50,7 +50,6 @@ output_header("Game");
         </main>
         <!-- End document main -->
         <script type="text/javascript" src="js/user.js"></script>
-        
         <script type="text/javascript" src="js/game.js"></script>
     </div>
     <!-- end wrapper (header and main) -->
