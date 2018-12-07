@@ -44,7 +44,7 @@ loginForm.onsubmit = function (e) {
         localStorage.setItem("userLoggedIn", userLoggedIn);
         loginMessage.classList.remove("success");
         loginMessage.classList.add("error");
-        loginMessage.innerHTML = "<i class='fas fa-times-circle'></i> invalid username or password";
+        loginMessage.innerHTML = "<i class='fas fa-times-circle'></i> invalid login details";
     }
 
 } // end loginForm onsubmit event function
@@ -73,16 +73,14 @@ if (localStorage.userLoggedIn != "none") {
     addLives.appendChild(addLiveTextNode)
     userProfile.after(logout);
     logout.after(addLives);
-
-
     logout.onclick = function () {
         localStorage.userLoggedIn = "none";
         window.location.reload();
     }
 
-    addLives.onclick = function() {
+    addLives.onclick = function () {
         addUserLives(loggedUser.username);
-     
+
     }
 } else if (localStorage.userLoggedIn == "none") {
     var registrationFrom = document.getElementById("registration-form");

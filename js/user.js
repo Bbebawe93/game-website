@@ -17,7 +17,7 @@ function getUsers() {
     return JSON.parse(localStorage.getItem("registeredUsers") || "[]");
 }
 
-// function to save users to local storages using JSON 
+// function to add users to local storages using JSON 
 function addUsers(userFirstName, userLastName, userUsername, userPassword, score, lives) {
     users = getUsers();
     var newUser = new User(userFirstName, userLastName, userUsername, userPassword, score, lives);
@@ -25,10 +25,10 @@ function addUsers(userFirstName, userLastName, userUsername, userPassword, score
     localStorage.setItem("registeredUsers", JSON.stringify(users));
 }
 
-// function to check if user is already registered, return boolean value
+// function to check if user is already registered, returns boolean value
 function registeredUser(username) {
     var registeredUser = false;
-    users = getUsers();  // return users from local storage 
+    users = getUsers(); // return users from local storage 
     for (i = 0; i < users.length; i++) {
         if (users[i].username === username) {
             registeredUser = true;
@@ -37,6 +37,7 @@ function registeredUser(username) {
     }
     return registeredUser
 }
+
 
 // function to check if user username and password match local storage 
 function UserLogin(username, password) {
@@ -47,27 +48,28 @@ function UserLogin(username, password) {
         if (users[i].username === username) {
             userFound = true;
             if (users[i].password === password) {
-                correctPassword = true; 
+                correctPassword = true;
             } else {
-                correctPassword = false; 
+                correctPassword = false;
             }
             break;
         } else {
             userFound = false;
         }
     }
-    if(userFound && correctPassword) {
-        return true; 
+    if (userFound && correctPassword) {
+        return true;
     } else {
         return false;
     }
 }
+
 // function return user if username and password matches 
 function fetchUser(username) {
-    var user; 
+    var user;
     var users = getUsers();
-    for(i = 0; i < users.length; i++) {
-        if(users[i].username === username) {
+    for (i = 0; i < users.length; i++) {
+        if (users[i].username === username) {
             user = users[i];
             break;
         }
@@ -75,37 +77,39 @@ function fetchUser(username) {
     return user;
 }
 
+// function to update user score 
 function updateUserScore(username) {
-    var users = getUsers(); 
-    for(i = 0; i < users.length; i++) {
-        if(users[i].username === username) {
-            users[i].score +=1;
+    var users = getUsers();
+    for (i = 0; i < users.length; i++) {
+        if (users[i].username === username) {
+            users[i].score += 1;
         }
     }
     localStorage.registeredUsers = JSON.stringify(users);
 
 }
 
+// function to update user lives 
 function updateUserLives(username) {
-    var users = getUsers(); 
-    for(i = 0; i < users.length; i++) {
-        if(users[i].username === username) {
-            users[i].lives -=1;
+    var users = getUsers();
+    for (i = 0; i < users.length; i++) {
+        if (users[i].username === username) {
+            users[i].lives -= 1;
         }
     }
     localStorage.registeredUsers = JSON.stringify(users);
 }
 
+// function to add lives to user 
 function addUserLives(username) {
-    var users = getUsers(); 
-    for(i = 0; i < users.length; i++) {
-        if(users[i].username === username) {
-            if(users[i].lives >= 6) {
+    var users = getUsers();
+    for (i = 0; i < users.length; i++) {
+        if (users[i].username === username) {
+            if (users[i].lives >= 6) {
                 alert("Lives at Max");
             } else {
-                users[i].lives +=1;
+                users[i].lives += 1;
                 alert("1 live added");
-
             }
         }
     }
@@ -115,13 +119,16 @@ function addUserLives(username) {
 
 // set the local storage values when game runs for the first time or when the user clear the local storage
 window.onload = function () {
-    if (localStorage.getItem("userLoggedIn") == null) {
+    if (localStorage.getItem("userLoggedIn") == undefined) {
         localStorage.setItem("userLoggedIn", "none");
         window.location.reload(); // reload the page to read the new values 
     }
-    if (JSON.parse(localStorage.getItem("registeredUsers")) == null) {
+    if (JSON.parse(localStorage.getItem("registeredUsers")) == undefined) {
         localStorage.setItem("registeredUsers", JSON.stringify(users));
         window.location.reload(); // reload the page to read the new values 
     }
 }
 
+window.onclose = function() {
+   
+}

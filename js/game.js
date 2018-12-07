@@ -145,7 +145,7 @@ function drawBricks() {
         }
     }
 }
-
+// function that draws grid using bricks inside the brickArray 
 function drawGrid() {
     var x = 0;
     var y = 50;
@@ -331,12 +331,15 @@ function init() {
                 } else
                 if (ballMissed == true) {
                     drawMissed();
+                    player = fetchUser(localStorage.userLoggedIn);
                 }
             }
-        } else if(player.lives <= 0){
+        } else if (player.lives == 0) {
             ctx.fillStyle = "red";
             ctx.textAlign = "center";
-            ctx.fillText("no lives, go to your account and add lives", canvasWidth / 2, canvasHeight / 2);
+            ctx.fillText("You missed it, no more lives to play", canvasWidth / 2, canvasHeight / 2);
+            ctx.fillText("Go to your account and add more lives", canvasWidth / 2, (canvasHeight + 80) / 2);
+
             // disable input fields if user not logged in
             command.disabled = true;
             submitBtn.disabled = true;
