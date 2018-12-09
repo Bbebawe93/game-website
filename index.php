@@ -22,9 +22,9 @@ output_header("Home");
                         All few our knew time done draw ask.</p>
                         <p>Subjects to ecstatic children he. Could ye leave up as built match. Dejection agreeable attention set suspected led offending. Admitting an performed Garden agreed matter are should formed temper had. Full held gay now roof whom such next w pretty our people moment put excuse narrow. Spite mirth money six above get going great own.  now shortly had for assured hearing expense. Led juvenile his laughing speedily put p relation offering.</p>
                         <div class="img-row">
-                            <img src="img/Placeholder.png" alt="" title="" class="game-img">
-                            <img src="img/Placeholder.png" alt="" title="" class="game-img">
-                            <img src="img/Placeholder.png" alt="" title="" class="game-img">
+                            <img src="img/game-1.png" alt="" title="" class="game-img">
+                            <img src="img/game-2.png" alt="" title="" class="game-img">
+                            <img src="img/game-3.png" alt="" title="" class="game-img">
                         </div>
                         <br>
                         <h2 class="secondary-heading">How to play</h2>

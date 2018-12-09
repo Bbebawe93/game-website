@@ -85,9 +85,9 @@ output_header("Ranking");
                 <!-- Begin main grid left column -->
                 <aside>
                     <div class="left-col ">
-                    <img src="img/Placeholder.png" alt="" title="" class="side-img">
-                    <img src="img/Placeholder.png" alt="" title="" class="side-img">
-                    <img src="img/Placeholder.png" alt="" title="" class="side-img">
+                    <img src="img/game-4.png" alt="" title="" class="side-img">
+                    <img src="img/game-5.png" alt="" title="" class="side-img">
+                    <img src="img/game-6.png" alt="" title="" class="side-img">
                 </div>
                 </aside>
                 <!-- End main grid left column -->
